@@ -7,7 +7,7 @@ in table and csv format for debugging and export purposes.
 
 Take one of your existing objects and inherit TableFormat
 
-```
+```python
 from pyTableFormat import TableFormat, Table_Formattable_Object
 
 class MyPeopleObject(Table_Formattable_Object):
@@ -51,7 +51,7 @@ This is because by default the TableFormat helper class will just take the colum
 length of the property name string. This can be adjusted however by overriding the inherited
 dict_extend_values property like so:
 
-```
+```python
 class MyPeopleObject(Table_Formattable_Object):
     def __init__(self):
         self.name = 'bob'
@@ -77,7 +77,7 @@ age  gender  name
 The dump_ignore_attrs property is pretty straighforward. If you want to ignore certain properties 
 just add them to the list like so
 
-```
+```python
 class MyPeopleObject(Table_Formattable_Object):
     def __init__(self):
         self.name = 'bob'
@@ -103,7 +103,7 @@ age  name
 
 Dumping to csv is similar and straighforward. It simply uses different methods.
 
-```
+```python
 # now dump some csv to screen (or file)
 print(mypeoples[1].dumpself_csv_header())
 # now loop through the list anc call the dumpself_csv method.
