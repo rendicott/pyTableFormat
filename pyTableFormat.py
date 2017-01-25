@@ -60,7 +60,11 @@ class TableFormat:
             except:
                 width = self.attributes_lengths[i]
             value_raw = str(self.values_raw[i])
-            value_trunc = value_raw[:width]
+            try:
+                # try subtracting a buffer between columns
+                value_trunc = value_raw[:width-1]
+            except:
+                value_trunc = value_raw[:width]
             self.values_trunc.append(value_trunc)
 
     def gen_string(self):
