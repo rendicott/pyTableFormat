@@ -94,7 +94,7 @@ class Table_Formattable_Object():
         for attr in dir(self):
             if (
                     '__' not in attr and
-                    'instancemethod' not in str(type(getattr(self, attr))) and
+                    'method' not in str(type(getattr(self, attr))) and
                     'dict' not in str(type(getattr(self, attr))) and
                     'dump_ignore_attrs' not in attr):
                 attributes.append(attr)
@@ -110,7 +110,7 @@ class Table_Formattable_Object():
         for attr in dir(self):
             if (
                     '__' not in attr and
-                    'instancemethod' not in str(type(getattr(self, attr))) and
+                    'method' not in str(type(getattr(self, attr))) and
                     'dict' not in str(type(getattr(self, attr))) and
                     'dump_ignore_attrs' not in attr):
                 attributes.append(attr)
@@ -125,7 +125,7 @@ class Table_Formattable_Object():
         for attr in dir(self):
             if (
                     '__' not in attr and
-                    'instancemethod' not in str(type(getattr(self, attr))) and
+                    'method' not in str(type(getattr(self, attr))) and
                     'dict' not in str(type(getattr(self, attr))) and
                     'dump_ignore_attrs' not in attr):
                 attributes.append(attr)
@@ -141,7 +141,7 @@ class Table_Formattable_Object():
         for attr in dir(self):
             if (
                     '__' not in attr and
-                    'instancemethod' not in str(type(getattr(self, attr))) and
+                    'method' not in str(type(getattr(self, attr))) and
                     'dict' not in str(type(getattr(self, attr))) and
                     'dump_ignore_attrs' not in attr):
                 attributes.append(attr)
